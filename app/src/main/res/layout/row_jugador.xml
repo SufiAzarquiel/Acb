@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="onClickJugador"
+    card_view:cardBackgroundColor="@color/azul"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="1dp"
+    android:layout_margin="2dp"
+    card_view:cardUseCompatPadding="false"
+    card_view:contentPadding="10dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivRowJugadorImagen"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:srcCompat="@drawable/jugador" />
+
+    <TextView
+        android:id="@+id/tvRowJugadorNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/azuloscuro"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/azulclaroo"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toEndOf="@+id/ivRowJugadorImagen"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRowJugadorEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        android:textColor="@color/azulmuyoscuro"
+        android:textStyle="bold"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRowJugadorPais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/azulmuyoscuro"
+        android:textStyle="bold"
+        card_view:layout_constraintBottom_toTopOf="@+id/tvRowJugadorEquipo"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toEndOf="@+id/ivRowJugadorImagen"
+        card_view:layout_constraintTop_toBottomOf="@+id/tvRowJugadorNombre" />
+
+    <ImageView
+        android:id="@+id/ivRowJugadorLike"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/tvRowJugadorNombre"
+        card_view:srcCompat="@drawable/thumbs" />
+
+    <TextView
+        android:id="@+id/tvRowJugadorLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="0"
+        android:textColor="@color/azulmuyoscuro"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        card_view:layout_constraintEnd_toStartOf="@+id/ivRowJugadorLike"
+        card_view:layout_constraintTop_toBottomOf="@+id/tvRowJugadorNombre" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
